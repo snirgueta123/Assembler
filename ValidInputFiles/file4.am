@@ -1,0 +1,16 @@
+MAIN: mov S1.1 ,LENGTH
+ add r2,#5
+LOOP: jmp END
+ prn #-5
+ sub r1, r2
+LOOP:jmp k
+ inc K
+ mov S1.2 ,r9,#7
+ bne LOOP
+END: hlt 1
+STR: .string "abcdef
+STV: .string "abcdef",5
+LENGTH: .data 6,-9,15,10.5
+.struct 8, "ab",12
+K: .data 22,"ab"
+S1: .struct 8.5, "ab"
